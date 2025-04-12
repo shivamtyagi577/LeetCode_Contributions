@@ -35,7 +35,7 @@ Contributions are welcome! If you have a better solution or an alternative appro
 
 ## Contact
 
-If you have any questions or suggestions, feel free to reach out to me at your-email@example.com.
+If you have any questions or suggestions, feel free to reach out to me at your-connect.shivamtyagi@gmail.com.
 
 Happy coding!
 
