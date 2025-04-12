@@ -25,3 +25,25 @@ This repository is a collection of my solutions to LeetCode problems. I have use
 
 The repository is organized as follows:
 
+LeetCode_Contributions/ ├── JavaScript/ │ ├── Easy/ │ ├── Medium/ │ └── Hard/ ├── SQL/ │ ├── Easy/ │ ├── Medium/ │ └── Hard/ └── Python/ ├── Easy/ ├── Medium/ └── Hard/
+
+
+## How to Use
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/shivamtyagi577/LeetCode_Contributions.git
+    ```
+2. Navigate to the desired folder (JavaScript, SQL, or Python) and select the difficulty level.
+3. Open the solution file to view the code.
+
+## Contributing
+
+Contributions are welcome! If you have a better solution or an alternative approach, feel free to open a pull request. Please ensure your code follows the repository's coding standards.
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out to me at your-email@example.com.
+
+Happy coding!
+
