@@ -6,7 +6,6 @@ Welcome to my LeetCode Contributions repository! This repository contains my sol
 
 - Introduction
 - Technologies Used
-- Folder Structure
 - How to Use
 - Contributing
 - Contact
@@ -20,13 +19,6 @@ This repository is a collection of my solutions to LeetCode problems. I have use
 - **JavaScript**: For solving algorithmic and data structure problems.
 - **SQL**: For solving database-related problems.
 - **Python**: For solving a variety of problems including algorithms, data structures, and more.
-
-## Folder Structure
-
-The repository is organized as follows:
-
-LeetCode_Contributions/ ├── JavaScript/ │ ├── Easy/ │ ├── Medium/ │ └── Hard/ ├── SQL/ │ ├── Easy/ │ ├── Medium/ │ └── Hard/ └── Python/ ├── Easy/ ├── Medium/ └── Hard/
-
 
 ## How to Use
 
