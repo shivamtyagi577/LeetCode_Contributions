@@ -17,7 +17,7 @@ This repository is a collection of my solutions to LeetCode problems. I have use
 ## Technologies Used
 
 - **JavaScript**: For solving algorithmic and data structure problems.
-- **SQL**: For solving database-related problems.
+- **SQL Interview**: For solving database-related problems.
 - **Python**: For solving a variety of problems including algorithms, data structures, and more.
 
 ## How to Use
