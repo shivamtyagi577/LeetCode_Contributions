@@ -1,0 +1,14 @@
+/* Write your T-SQL query statement below */
+;With Project_Details as(
+	Select project_id, e.employee_id, e.experience_years
+	From Project p join Employee e
+	on p.employee_id = e.employee_id
+),
+AggregatedData as (
+	Select pd.project_id, ISNULL(SUM(pd.experience_years),0) 'Total Number of Years', COUNT(pd.employee_id) 'Total Number of Employees'
+	From Project_Details pd
+	Group by pd.project_id
+)
+Select ad.project_id, Round(CONVERT(Decimal(10,5),Cast(ad.[Total Number of Years] as float)/Cast(ad.[Total Number of Employees] as float)),2) 'average_years'
+from AggregatedData ad
+order by 1 asc
