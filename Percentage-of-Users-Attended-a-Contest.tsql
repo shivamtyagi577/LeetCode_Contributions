@@ -1,0 +1,13 @@
+;with totalUsers as(
+    Select COUNT(*) 'totalUsersCount'  from Users us
+),
+totalUsersRegistered as(
+    Select COUNT(*) 'totalUsersRegisteredIN', contest_id 
+    From Register rg 
+    Inner Join Users us
+    on us.user_id = rg.user_id
+    Group by contest_id
+)
+Select contest_id, ROUND(totalUsersRegisteredIN * 100.0/totalUsersCount,2) 'percentage'
+From totalUsersRegistered,totalUsers
+order by percentage desc, contest_id asc
