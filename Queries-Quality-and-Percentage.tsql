@@ -1,0 +1,20 @@
+/* Write your T-SQL query statement below */
+
+;with totalQueryNames as(
+    Select COUNT(*) 'totalCountOfQueryName', qr.query_name from Queries qr Group by qr.query_name
+),
+qualityResult as (
+    Select qr.query_name,ROUND(SUM(ROUND(Cast(qr.rating as float)/qr.position,4)/tqn.totalCountOfQueryName),2)  'qualityRatio'
+    From Queries qr Inner Join totalQueryNames tqn on qr.query_name = tqn.query_name
+	Group by qr.query_name
+),
+poorQualityCount as(
+    Select qr.query_name/*,qr.rating*/, SUM(Case when qr.rating < 3 then 1 Else 0 End)  'poorQualityPercenatageColumn'
+    From Queries qr Inner Join totalQueryNames tqn
+    on qr.query_name = tqn.query_name
+	--Where qr.rating < 3
+	Group by qr.query_name/*, qr.rating*/
+)
+Select pqr.query_name, qr1.qualityRatio 'quality', ROUND(CAST(pqr.poorQualityPercenatageColumn as float) * 100/tqn.totalCountOfQueryName,2)  'poor_query_percentage' 
+From poorQualityCount pqr Inner Join qualityResult qr1 on pqr.query_name = qr1.query_name
+Inner Join totalQueryNames tqn on qr1.query_name = tqn.query_name
