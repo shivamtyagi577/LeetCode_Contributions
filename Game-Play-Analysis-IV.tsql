@@ -1,0 +1,18 @@
+/* Write your T-SQL query statement below */
+
+With FirstLogin as(
+    Select player_id, Min(event_date) 'first_login_date'
+    From Activity 
+    Group by Player_id
+),
+NextDayLogin as(
+    Select ac.player_id
+    From Activity ac
+    Inner Join FirstLogin fl
+    On ac.player_id = fl.player_id
+    Where ac.event_date = DATEADD(day, 1, fl.first_login_date)
+)
+Select ROUND(CAST(COUNT(n.player_id) as Float)/COUNT(f.player_id), 2) as fraction/* COUNT(n.player_id), COUNT(f.player_id)*/
+From FirstLogin f
+Left Join NextDayLogin n
+on f.player_id = n.player_id
