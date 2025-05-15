@@ -1,0 +1,4 @@
+/* Write your T-SQL query statement below */
+Select teacher_id, COUNT(DISTINCT subject_id) as cnt
+From Teacher 
+Group by teacher_id
