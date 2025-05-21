@@ -1,0 +1,8 @@
+
+with MaxSingleNumber as (
+    Select num , COUNT(num) 'Singles'
+    From MyNumbers
+    group by num
+)
+Select top 1 (Case when Singles = 1 then num Else null End) 'num' from MaxSingleNumber
+order by 1 desc
