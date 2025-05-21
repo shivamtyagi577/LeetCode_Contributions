@@ -1,0 +1,6 @@
+
+
+with COUNT1 as (
+    Select COUNT(student) 'COUNT', class from Courses group by class having COUNT(student) >= 5
+)
+Select class from COUNT1
