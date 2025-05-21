@@ -1,0 +1,4 @@
+/* Write your T-SQL query statement below */
+Select user_id, COUNT(follower_id) 'followers_count'
+From Followers
+group by user_id
