@@ -1,0 +1,12 @@
+
+
+with Distinct_Products as(
+    Select DISTINCT product_id FROM Products
+)
+Select p.product_id, COALESCE(
+    (Select top 1  new_price 
+    From Products 
+    Where product_id = p.product_id 
+    And change_date <= '2019-08-16' 
+    Order By change_date Desc), 10) AS price
+From Distinct_Products p
