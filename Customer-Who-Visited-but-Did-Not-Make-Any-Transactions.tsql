@@ -1,0 +1,20 @@
+/* Write your T-SQL query statement below */
+-- Select v.customer_id,Count(v.visit_id) 'count_no_trans'
+-- From Visits v
+-- Where v.visit_id not in (Select t.visit_id from Transactions t)
+-- Group by v.customer_id
+
+-- with visitingWithTransactions as (
+--     Select distinct t.visit_id from Transactions t Inner Join Visits V on t.visit_id = v.visit_id
+-- )
+-- Select v.customer_id, Count(v.visit_id) 'count_no_trans'
+-- From Visits v
+-- where v.visit_id not in (Select visit_id from visitingWithTransactions)
+-- Group by v.customer_id
+
+SELECT v.customer_id, COUNT(*) AS count_no_trans
+FROM Visits v
+LEFT JOIN Transactions t
+ON v.visit_id = t.visit_id
+WHERE t.transaction_id IS NULL
+GROUP BY v.customer_id;
