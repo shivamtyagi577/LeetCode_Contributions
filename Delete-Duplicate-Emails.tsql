@@ -1,0 +1,6 @@
+/* Write your T-SQL query statement below */
+With cte(id, email, duplicates)
+as (Select id, email, ROW_NUMBER() over (partition by email order by id asc)
+    from Person)
+Delete from cte 
+where duplicates > 1
