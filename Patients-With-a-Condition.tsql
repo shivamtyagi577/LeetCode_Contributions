@@ -1,0 +1,10 @@
+/* Write your T-SQL query statement below */
+Select *
+From Patients
+where conditions like 'DIAB1%'
+
+Union
+
+Select *
+From Patients
+where conditions like '% DIAB1%'
