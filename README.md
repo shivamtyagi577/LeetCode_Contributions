@@ -1,4 +1,4 @@
-# LeetCode Contributions
+# LeetCode Contributions 
 
 Welcome to my LeetCode Contributions repository! This repository contains my solutions to various LeetCode problems using JavaScript, SQL, and Python.
 
