@@ -1,5 +1,7 @@
 <h2><a href="https://leetcode.com/problems/article-views-i">Article Views I</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>Table: <code>Views</code></p>
 
+<h2>Solutions have been provided in both Pandas and SQL Server</h2>
+
 <pre>
 +---------------+---------+
 | Column Name   | Type    |
