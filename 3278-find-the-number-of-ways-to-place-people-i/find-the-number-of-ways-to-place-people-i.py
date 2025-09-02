@@ -11,9 +11,7 @@ class Solution:
 
                 x1, y1 = points[i]
                 x2, y2 = points[j]
-
-                print(x1,y1,x2,y2)
-
+                
                 # Check if point i on the upper left side of point j
                 if x1 <= x2 and y1 >= y2:
                     valid = True
