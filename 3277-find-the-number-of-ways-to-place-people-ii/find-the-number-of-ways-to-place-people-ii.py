@@ -1,11 +1,11 @@
 class Solution:
     def numberOfPairs(self, points: List[List[int]]) -> int:
-        res = 0
-        points.sort(key=lambda p: (p[0], -p[1]))
+        count = 0
+        points.sort(key=lambda p: (p[0], -p[1])) # Sort by x ascending, y descending
         for i, (x1, y1) in enumerate(points):
-            y = -inf
+            y = float('-inf') # Track the highest y2 we've used so far
             for (x2, y2) in points[i + 1:]:
                 if y1 >= y2 > y:
-                    res += 1
+                    count += 1
                     y = y2
-        return res     
+        return count     
