@@ -8,4 +8,4 @@ class Solution:
                 if y1 >= y2 > y:
                     count += 1
                     y = y2
-        return count     
+        return count
