@@ -6,7 +6,6 @@ class Solution(object):
         :rtype: int
         """
         x = nums.count(val)
-        print(x)
         for i in range(x):
             nums.remove(val)
         return len(nums)
