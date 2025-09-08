@@ -1,9 +1,5 @@
 class Solution(object):
     def getNoZeroIntegers(self, n):
-        """
-        :type n: int
-        :rtype: List[int]
-        """
         def checkNoZero(num):
             while num > 0:
                 remain = num % 10
