@@ -1,4 +1,8 @@
 # LeetCode Contributions 
+<p align = "left">
+    <a href="https://leetcode.com/u/Shivam_Tyagi/" target = "_blank">
+    <img src='https://img.shields.io/badge/LeetCode-Easy/Medium/Hard-orange' alt='Difficulty: Easy' />
+</p>
 
 Welcome to my LeetCode Contributions repository! This repository contains my solutions to various LeetCode problems using JavaScript, SQL, and Python.
 
