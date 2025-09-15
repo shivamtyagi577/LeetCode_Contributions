@@ -1,4 +1,6 @@
-def min_operations_to_zero(l: int, r: int) -> int:
+class Solution:
+    def minOperations(self, queries: List[List[int]]) -> int:
+        def min_operations_to_zero(l: int, r: int) -> int:
             """
             For a given range [l,r], calculate the minimum number of operationss
             required to reduce all elements to zero using operation:
