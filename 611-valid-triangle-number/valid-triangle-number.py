@@ -1,17 +1,15 @@
 class Solution:
     def triangleNumber(self, nums: List[int]) -> int:
+        ans = 0
         nums.sort()
-        count = 0
         n = len(nums)
 
-        for k in range(n-1, 1, -1):
-            i = 0
-            j = k-1
-            while i < j:
-                if nums[i] + nums[j] > nums[k]:
-                    count += j-i
-                    j-= 1
-                else:
-                    i+= 1
-        return count
+        for i in range(n - 2):
+            for j in range(i + 1, n - 1):
+                limit = nums[i] + nums[j]
+                # find max k that nums[k] < limit
+                k = bisect_left(nums, limit, j + 1)
+                ans += k - 1 - j
+
+        return ans
 __import__("atexit").register(lambda: open("display_runtime.txt", "w").write("000"))
