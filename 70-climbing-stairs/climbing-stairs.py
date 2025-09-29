@@ -6,6 +6,5 @@ class Solution:
         a,b = 1, 2
         for _ in range(3, n+1):
             a, b = b, a+b
-            print(a,b)
         return b
 __import__("atexit").register(lambda: open("display_runtime.txt", "w").write("000"))
