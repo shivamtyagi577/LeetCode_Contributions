@@ -7,4 +7,4 @@ class Solution:
         for _ in range(3, n+1):
             a, b = b, a+b
         return b
-__import__("atexit").register(lambda: open("display_runtime.txt", "w").write("000"))
+# __import__("atexit").register(lambda: open("display_runtime.txt", "w").write("000"))
